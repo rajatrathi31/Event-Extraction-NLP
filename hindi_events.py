@@ -22,7 +22,7 @@ for path, dirs, files in os.walk(file_path):
                             words = len(item.findall('.//W'))
                             link = item.find('LINK')
                             if ((link) == None) and item.attrib.get("ID")!=None :
-                                event_dict[item.attrib["ID"]] = [index, index+words-1, item.tag , (item.attrib["TYPE"] if item.attrib.get('TYPE')!=None else 0)]
+                                event_dict[item.attrib["ID"]] = [index, index+words-1, item.tag , (item.attrib["TYPE"] if item.attrib.get('TYPE')!=None else "NA")]
                                 #print("Event : ", item.tag, index, index+words-1)
                             elif link!=None:
                                 if(arg_dict.get(link.attrib["EVENT_ARG"])== None) :
