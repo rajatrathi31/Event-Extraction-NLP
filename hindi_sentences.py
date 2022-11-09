@@ -2,13 +2,7 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 import os
 
-
-path = "hindi_ee/test/1-5-lac-property-ashes-in-a-fire-caused-by-short-circuit-hindi-news5.txt.xml"
-tree = ET.parse(path)
-root = tree.getroot()
-
-
-file_path = "./test"
+file_path = "./hindi_ee/train"
 sentences = []
 
 with open("output.txt", "w") as f:
