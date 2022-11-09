@@ -1,0 +1,340 @@
+7 7 Movement:Transport 8 17 PER Artifact | 7 7 Movement:Transport 19 22 LOC Destination
+11 11 Conflict:Attack 1 1 NA NA | 13 13 Personnel:End-Position 13 16 PER Person | 13 13 Personnel:End-Position 20 20 GPE Entity | 13 13 Personnel:End-Position 14 14 Job-Title Position | 13 13 Personnel:End-Position 13 13 TIM Time-Within
+14 14 Personnel:End-Position 14 19 PER Person | 14 14 Personnel:End-Position 23 23 GPE Entity | 14 14 Personnel:End-Position 15 15 Job-Title Position | 14 14 Personnel:End-Position 14 14 TIM Time-Within
+17 17 Conflict:Attack 1 1 NA NA
+41 42 Personnel:End-Position 34 45 PER Person | 41 42 Personnel:End-Position 37 37 GPE Entity
+21 21 Life:Die 22 22 PER Victim | 21 21 Life:Die 15 20 PER Agent | 21 21 Life:Die 13 13 GPE Place | 12 12 Movement:Transport 22 22 PER Artifact | 12 12 Movement:Transport 13 13 GPE Destination
+22 22 Life:Die 23 23 PER Victim | 22 22 Life:Die 16 21 PER Agent | 12 12 Movement:Transport 5 6 PER Artifact
+19 19 Conflict:Attack 1 1 NA NA
+6 6 Conflict:Attack 1 1 NA NA
+10 10 Life:Die 6 10 PER Victim | 10 10 Life:Die 12 17 PER Victim | 10 10 Life:Die 19 22 PER Victim | 10 10 Life:Die 14 17 TIM Time-Within | 10 10 Life:Die 33 35 TIM Time-Within
+3 3 Contact:Meet 2 2 PER Entity | 3 3 Contact:Meet 4 6 PER Entity
+34 34 Conflict:Attack 1 1 NA NA | 8 8 Movement:Transport 3 3 PER Artifact
+4 4 Conflict:Attack 2 2 PER Attacker | 4 4 Conflict:Attack 8 9 LOC Place
+19 19 Conflict:Attack 1 1 NA NA | 24 24 Conflict:Attack 20 21 GPE Attacker
+41 41 Movement:Transport 35 39 PER Artifact | 41 41 Movement:Transport 43 43 GPE Destination
+26 26 Movement:Transport 27 32 PER Artifact | 26 26 Movement:Transport 21 23 PER Agent | 26 26 Movement:Transport 35 35 GPE Origin | 38 38 Conflict:Attack 1 1 NA NA
+10 10 Conflict:Attack 1 1 NA NA | 16 16 Conflict:Attack 1 1 NA NA
+50 50 Conflict:Attack 24 24 GPE Attacker
+8 8 Conflict:Attack 1 1 NA NA
+11 11 Conflict:Attack 1 1 NA NA
+7 8 Movement:Transport 15 28 VEH Vehicle | 7 8 Movement:Transport 12 28 PER Artifact | 7 8 Movement:Transport 9 10 LOC Destination
+23 23 Conflict:Attack 19 21 PER Attacker | 23 23 Conflict:Attack 30 30 VEH Target | 23 23 Conflict:Attack 24 25 WEA Instrument | 23 23 Conflict:Attack 28 28 WEA Instrument | 34 34 Conflict:Attack 1 1 NA NA
+26 26 Conflict:Attack 21 21 PER Attacker | 26 26 Conflict:Attack 28 28 PER Target | 26 26 Conflict:Attack 23 24 WEA Instrument | 7 7 Conflict:Attack 2 2 PER Attacker | 7 7 Conflict:Attack 8 8 PER Target
+41 41 Conflict:Attack 5 5 PER Attacker | 41 41 Conflict:Attack 32 32 PER Target | 41 41 Conflict:Attack 38 39 VEH Target | 41 41 Conflict:Attack 42 43 WEA Instrument | 25 25 Conflict:Attack 5 5 PER Attacker | 25 25 Conflict:Attack 30 30 PER Target
+4 4 Movement:Transport 2 3 VEH Vehicle | 4 4 Movement:Transport 7 7 FAC Destination
+10 10 Conflict:Attack 32 32 GPE Place | 10 10 Conflict:Attack 14 14 WEA Instrument | 10 10 Conflict:Attack 16 16 WEA Instrument
+16 16 Contact:Meet 10 10 PER Entity | 16 16 Contact:Meet 18 24 PER Entity | 16 16 Contact:Meet 6 6 TIM Time-Within
+25 25 Transaction:Transfer-Ownership 5 6 PER Beneficiary | 25 25 Transaction:Transfer-Ownership 23 28 WEA Artifact
+13 13 Conflict:Attack 7 9 FAC Place | 13 13 Conflict:Attack 18 18 GPE Place | 13 13 Conflict:Attack 15 18 PER Target
+5 5 Conflict:Attack 13 18 LOC Place
+11 11 Movement:Transport 13 13 GPE Destination | 11 11 Movement:Transport 15 15 TIM Time-Within
+16 16 Conflict:Attack 2 8 PER Attacker | 16 16 Conflict:Attack 22 24 GPE Place | 16 16 Conflict:Attack 26 27 GPE Place | 16 16 Conflict:Attack 17 20 PER Target | 12 12 Movement:Transport 2 8 PER Artifact | 12 12 Movement:Transport 22 24 GPE Origin | 12 12 Movement:Transport 26 27 GPE Origin
+12 12 Movement:Transport 1 1 NA NA
+14 14 Movement:Transport 9 13 PER Artifact | 14 14 Movement:Transport 16 18 GPE Destination
+27 27 Movement:Transport 22 22 PER Artifact | 27 27 Movement:Transport 30 32 LOC Destination | 24 24 Movement:Transport 22 22 PER Artifact | 24 24 Movement:Transport 30 32 LOC Destination | 24 24 Movement:Transport 25 25 GPE Origin
+24 24 Movement:Transport 18 21 PER Artifact | 24 24 Movement:Transport 26 28 GPE Destination
+15 15 Movement:Transport 7 14 PER Artifact | 15 15 Movement:Transport 22 22 GPE Destination | 15 15 Movement:Transport 3 4 TIM Time-Holds
+23 23 Conflict:Attack 7 14 PER Attacker | 23 23 Conflict:Attack 16 18 GPE Place | 23 23 Conflict:Attack 2 5 TIM Time-Within
+8 9 Movement:Transport 15 15 GPE Destination | 8 9 Movement:Transport 4 6 PER Artifact
+17 17 Conflict:Attack 1 1 NA NA
+6 6 Conflict:Attack 1 1 NA NA
+18 19 Movement:Transport 17 17 PER Artifact | 18 19 Movement:Transport 26 26 GPE Destination | 13 15 Conflict:Attack 6 9 PER Attacker
+8 9 Conflict:Attack 11 13 PER Attacker | 8 9 Conflict:Attack 16 27 WEA Target
+10 10 Conflict:Attack 2 9 PER Attacker | 10 10 Conflict:Attack 17 19 PER Target | 10 10 Conflict:Attack 11 12 WEA Instrument
+5 5 Conflict:Attack 2 4 PER Attacker | 5 5 Conflict:Attack 19 20 PER Target | 5 5 Conflict:Attack 6 8 WEA Instrument | 10 10 Conflict:Attack 2 4 PER Attacker | 10 10 Conflict:Attack 19 20 PER Target | 10 10 Conflict:Attack 11 14 WEA Instrument | 29 29 Life:Die 6 8 WEA Instrument | 29 29 Life:Die 11 14 WEA Instrument | 29 29 Life:Die 30 33 PER Victim | 29 29 Life:Die 2 4 PER Agent
+7 7 Movement:Transport 4 4 PER Artifact | 7 7 Movement:Transport 11 15 LOC Destination
+6 6 Movement:Transport 8 8 GPE Destination | 6 6 Movement:Transport 5 5 PER Artifact
+13 13 Conflict:Attack 1 1 NA NA
+31 32 Conflict:Attack 16 19 ORG Attacker | 31 32 Conflict:Attack 27 30 ORG Attacker | 31 32 Conflict:Attack 40 42 GPE Place | 31 32 Conflict:Attack 34 35 ORG Target | 31 32 Conflict:Attack 9 19 VEH Instrument | 31 32 Conflict:Attack 9 19 VEH Instrument | 31 32 Conflict:Attack 22 30 VEH Instrument
+7 7 Movement:Transport 27 32 PER Artifact | 7 7 Movement:Transport 11 12 GPE Origin | 7 7 Movement:Transport 41 41 GPE Destination
+31 31 Conflict:Attack 26 27 PER Attacker | 31 31 Conflict:Attack 33 34 PER Target
+25 25 Movement:Transport 32 33 VEH Vehicle | 25 25 Movement:Transport 22 23 PER Artifact | 25 25 Movement:Transport 26 26 GPE Origin | 40 41 Conflict:Attack 26 26 GPE Place | 40 41 Conflict:Attack 22 23 PER Target | 40 41 Conflict:Attack 39 39 GPE Attacker
+21 21 Movement:Transport 19 22 PER Artifact | 21 21 Movement:Transport 22 22 GPE Destination | 27 27 Conflict:Attack 19 22 PER Attacker | 27 27 Conflict:Attack 22 22 GPE Place | 27 27 Conflict:Attack 32 32 PER Target
+33 33 Movement:Transport 30 31 PER Artifact | 33 33 Movement:Transport 34 39 LOC Destination
+10 10 Conflict:Attack 14 15 GPE Place
+32 32 Conflict:Attack 33 34 LOC Place | 32 32 Conflict:Attack 29 30 WEA Instrument
+39 39 Conflict:Attack 1 1 NA NA
+7 7 Conflict:Attack 1 1 NA NA
+38 38 Conflict:Attack 1 1 NA NA
+27 27 Conflict:Attack 1 1 NA NA
+17 17 Conflict:Attack 1 1 NA NA
+27 28 Conflict:Attack 23 25 TIM Time-Within
+5 5 Conflict:Attack 1 1 NA NA
+26 26 Conflict:Attack 1 1 NA NA
+18 19 Movement:Transport 12 17 PER Artifact | 18 19 Movement:Transport 21 23 FAC Origin
+22 22 Personnel:End-Position 20 23 PER Person | 22 22 Personnel:End-Position 21 21 GPE Entity | 22 22 Personnel:End-Position 23 23 Job-Title Position
+8 8 Movement:Transport 2 3 PER Artifact | 8 8 Movement:Transport 13 14 PER Artifact | 8 8 Movement:Transport 10 10 GPE Destination | 5 5 Personnel:End-Position 4 6 PER Person | 5 5 Personnel:End-Position 6 6 Job-Title Position
+17 17 Contact:Meet 4 8 TIM Time-Starting
+19 19 Contact:Meet 7 12 PER Entity
+12 12 Contact:Meet 2 2 PER Entity
+37 37 Movement:Transport 44 44 PER Artifact | 37 37 Movement:Transport 39 39 GPE Destination | 37 37 Movement:Transport 41 42 TIM Time-Within
+26 26 Conflict:Attack 1 1 NA NA
+6 6 Conflict:Attack 11 11 GPE Place
+20 20 Conflict:Attack 16 17 PER Target | 5 5 Movement:Transport 3 4 PER Artifact | 5 5 Movement:Transport 7 8 FAC Destination
+20 20 Contact:Meet 22 24 FAC Place | 20 20 Contact:Meet 2 2 PER Entity
+9 9 Movement:Transport 5 7 FAC Origin | 21 21 Movement:Transport 20 20 PER Artifact | 21 21 Movement:Transport 23 25 FAC Destination | 21 21 Movement:Transport 16 18 FAC Origin | 41 41 Movement:Transport 40 40 PER Artifact | 41 41 Movement:Transport 43 43 FAC Destination | 41 41 Movement:Transport 36 38 FAC Origin | 74 74 Movement:Transport 79 80 FAC Destination
+13 13 Personnel:Elect 8 11 PER Person | 13 13 Personnel:Elect 23 24 GPE Place | 13 13 Personnel:Elect 14 15 ORG Entity | 13 13 Personnel:Elect 14 16 Job-Title Position | 13 13 Personnel:Elect 18 21 TIM Time-Within
+5 5 Personnel:Start-Position 4 4 PER Person | 5 5 Personnel:Start-Position 12 14 ORG Entity
+14 14 Movement:Transport 12 13 PER Artifact | 14 14 Movement:Transport 16 23 FAC Destination | 14 14 Movement:Transport 5 8 TIM Time-Within | 26 26 Personnel:End-Position 27 29 PER Person | 26 26 Personnel:End-Position 16 23 FAC Place | 26 26 Personnel:End-Position 17 18 ORG Entity | 26 26 Personnel:End-Position 5 8 TIM Time-Within
+7 7 Personnel:End-Position 2 6 PER Person
+17 17 Personnel:End-Position 12 17 PER Person | 17 17 Personnel:End-Position 33 35 ORG Entity
+10 10 Transaction:Transfer-Money 7 9 ORG Giver | 10 10 Transaction:Transfer-Money 14 16 PER Recipient | 10 10 Transaction:Transfer-Money 4 5 TIM Time-After
+12 12 Transaction:Transfer-Money 1 1 NA NA
+12 12 Transaction:Transfer-Money 8 9 PER Recipient | 18 18 Transaction:Transfer-Money 1 1 NA NA
+23 23 Personnel:End-Position 19 20 PER Person | 23 23 Personnel:End-Position 15 17 ORG Entity
+27 27 Personnel:End-Position 28 30 PER Person
+13 13 Personnel:End-Position 14 14 PER Person | 26 26 Personnel:End-Position 27 28 PER Person | 26 26 Personnel:End-Position 32 34 TIM Time-Within
+15 16 Personnel:End-Position 2 2 PER Person
+19 19 Transaction:Transfer-Ownership 16 16 FAC Artifact | 19 19 Transaction:Transfer-Ownership 5 9 PER Buyer
+3 4 Personnel:End-Position 2 2 PER Person
+6 6 Personnel:End-Position 5 5 PER Person | 28 29 Personnel:End-Position 18 21 PER Person | 28 29 Personnel:End-Position 23 25 PER Person
+9 9 Contact:Meet 3 3 PER Entity | 9 9 Contact:Meet 8 8 PER Entity | 9 9 Contact:Meet 11 12 TIM Time-Within
+9 10 Personnel:End-Position 7 10 PER Person | 19 19 Movement:Transport 15 15 PER Artifact | 19 19 Movement:Transport 21 22 GPE Destination
+32 32 Personnel:End-Position 30 30 PER Person | 42 42 Personnel:Start-Position 39 39 PER Person | 42 42 Personnel:Start-Position 44 46 ORG Entity
+28 28 Transaction:Transfer-Money 31 33 ORG Giver | 28 28 Transaction:Transfer-Money 14 17 PER Recipient
+19 19 Transaction:Transfer-Money 22 24 ORG Giver | 19 19 Transaction:Transfer-Money 12 15 PER Recipient
+25 25 Transaction:Transfer-Money 20 23 PER Recipient | 28 28 Personnel:End-Position 20 23 PER Person
+33 34 Personnel:End-Position 36 38 PER Person | 33 34 Personnel:End-Position 36 38 PER Person | 25 25 Transaction:Transfer-Money 19 22 PER Beneficiary | 25 25 Transaction:Transfer-Money 26 30 Numeric Money
+9 9 Transaction:Transfer-Money 3 4 PER Giver | 9 9 Transaction:Transfer-Money 10 10 PER Recipient | 9 9 Transaction:Transfer-Money 11 11 TIM Time-Within | 19 19 Transaction:Transfer-Money 14 14 PER Giver | 19 19 Transaction:Transfer-Money 20 20 PER Recipient | 19 19 Transaction:Transfer-Money 21 21 TIM Time-Within
+38 38 Contact:Meet 36 37 PER Entity
+24 25 Transaction:Transfer-Money 26 28 PER Recipient | 24 25 Transaction:Transfer-Money 2 4 PER Giver | 24 25 Transaction:Transfer-Money 32 33 TIM Time-Holds | 24 25 Transaction:Transfer-Money 36 37 TIM Time-Holds | 24 25 Transaction:Transfer-Money 26 28 PER Recipient
+8 8 Transaction:Transfer-Money 3 5 PER Recipient
+59 59 Personnel:Elect 60 70 PER Person | 59 59 Personnel:Elect 55 56 PER Entity
+11 11 Personnel:End-Position 9 9 PER Person | 42 42 Personnel:Start-Position 43 44 PER Person | 42 42 Personnel:Start-Position 27 28 TIM Time-Within | 21 22 Transaction:Transfer-Money 24 25 PER Giver | 21 22 Transaction:Transfer-Money 9 9 PER Recipient | 21 22 Transaction:Transfer-Money 27 28 TIM Time-Within
+30 30 Personnel:Start-Position 20 23 PER Person | 30 30 Personnel:Start-Position 25 27 ORG Entity | 30 30 Personnel:Start-Position 33 34 Job-Title Position
+26 26 Personnel:Start-Position 27 27 PER Person | 53 54 Personnel:End-Position 52 52 PER Person
+18 18 Transaction:Transfer-Money 22 24 ORG Giver | 18 18 Transaction:Transfer-Money 7 8 PER Recipient | 18 18 Transaction:Transfer-Money 19 19 TIM Time-Within
+10 11 Personnel:Start-Position 12 17 PER Person | 10 11 Personnel:Start-Position 21 22 Job-Title Position
+10 10 Personnel:Start-Position 11 18 PER Person
+31 31 Personnel:Elect 28 29 PER Person
+26 26 Personnel:Elect 25 27 PER Person
+103 103 Transaction:Transfer-Money 104 104 ORG Recipient | 103 103 Transaction:Transfer-Money 100 100 PER Giver
+48 48 Personnel:Start-Position 40 41 PER Person | 48 48 Personnel:Start-Position 34 34 GPE Place | 48 48 Personnel:Start-Position 95 100 ORG Entity | 48 48 Personnel:Start-Position 50 51 Job-Title Position | 42 43 Personnel:End-Position 40 41 PER Person | 42 43 Personnel:End-Position 34 34 GPE Place | 42 43 Personnel:End-Position 45 45 Job-Title Position | 129 129 Transaction:Transfer-Money 120 121 ORG Giver | 129 129 Transaction:Transfer-Money 130 131 PER Recipient | 35 35 Contact:Meet 34 34 GPE Place | 65 65 Justice:Sue 81 86 PER Defendant | 65 65 Justice:Sue 88 107 Crime Crime | 65 65 Justice:Sue 60 61 PER Plaintiff | 75 75 Justice:Sue 73 73 PER Plaintiff | 75 75 Justice:Sue 74 74 TIM Time-Within | 80 80 Justice:Charge-Indict 81 86 PER Defendant | 80 80 Justice:Charge-Indict 60 61 PER Prosecutor | 80 80 Justice:Charge-Indict 88 107 Crime Crime
+44 44 Justice:Sue 49 51 ORG Defendant | 44 44 Justice:Sue 41 41 PER Plaintiff | 9 9 Justice:Sue 32 34 ORG Defendant | 9 9 Justice:Sue 14 15 GPE Place | 9 9 Justice:Sue 3 3 PER Plaintiff
+25 25 Justice:Sue 49 50 ORG Adjudicator | 25 25 Justice:Sue 12 13 PER Plaintiff | 10 10 Justice:Sue 12 13 PER Plaintiff
+8 11 Transaction:Transfer-Money 12 13 PER Recipient | 16 16 Contact:Meet 12 13 PER Entity | 33 33 Contact:Meet 12 13 PER Entity | 33 33 Contact:Meet 32 32 PER Entity | 40 40 Transaction:Transfer-Money 12 13 PER Recipient
+26 26 Transaction:Transfer-Money 6 7 ORG Giver | 26 26 Transaction:Transfer-Money 27 28 PER Recipient
+9 12 Transaction:Transfer-Money 13 14 PER Recipient
+24 24 Contact:Meet 20 20 PER Entity | 11 11 Transaction:Transfer-Money 5 5 PER Giver | 11 11 Transaction:Transfer-Money 12 12 PER Recipient | 14 14 Personnel:End-Position 15 17 PER Person
+18 21 Transaction:Transfer-Money 22 24 PER Recipient
+8 8 Contact:Meet 1 1 NA NA
+15 15 Contact:Meet 10 12 PER Entity
+19 19 Transaction:Transfer-Money 24 24 PER Recipient
+34 34 Contact:Meet 33 33 PER Entity
+12 12 Transaction:Transfer-Money 14 14 PER Recipient
+16 16 Transaction:Transfer-Money 14 14 GPE Place | 16 16 Transaction:Transfer-Money 25 30 PER Recipient
+4 4 Transaction:Transfer-Money 2 2 PER Giver
+12 12 Transaction:Transfer-Money 2 2 PER Giver | 12 12 Transaction:Transfer-Money 8 9 PER Recipient
+26 26 Transaction:Transfer-Money 9 9 GPE Place
+17 17 Personnel:Elect 16 19 PER Person | 17 17 Personnel:Elect 16 16 ORG Entity | 15 15 Transaction:Transfer-Money 16 19 PER Recipient
+7 7 Transaction:Transfer-Money 1 1 NA NA
+25 25 Personnel:End-Position 22 27 PER Person | 25 25 Personnel:End-Position 22 22 GPE Entity | 25 25 Personnel:End-Position 26 27 Job-Title Position | 20 20 Life:Die 22 27 PER Victim | 20 20 Life:Die 29 29 GPE Place | 20 20 Life:Die 31 31 TIM Time-Within
+55 56 Transaction:Transfer-Money 53 53 ORG Beneficiary | 55 56 Transaction:Transfer-Money 58 58 GPE Place | 55 56 Transaction:Transfer-Money 60 61 ORG Recipient
+47 50 Conflict:Attack 52 52 GPE Place | 47 50 Conflict:Attack 46 46 TIM Time-Holds
+45 45 Contact:Meet 1 1 NA NA | 51 51 Conflict:Attack 48 53 ORG Attacker | 51 51 Conflict:Attack 35 37 GPE Place | 51 51 Conflict:Attack 52 53 PER Target
+25 25 Contact:Meet 20 20 GPE Place | 25 25 Contact:Meet 27 30 ORG Entity | 25 25 Contact:Meet 22 22 TIM Time-Within | 39 39 Contact:Meet 32 48 ORG Entity
+32 32 Conflict:Attack 19 43 ORG Attacker | 32 32 Conflict:Attack 34 34 GPE Place
+19 19 Life:Die 20 22 PER Victim | 19 19 Life:Die 13 29 PER Agent | 19 19 Life:Die 27 29 GPE Place | 25 25 Conflict:Attack 6 10 PER Attacker | 25 25 Conflict:Attack 27 29 GPE Place
+14 14 Conflict:Attack 23 41 PER Attacker | 14 14 Conflict:Attack 40 41 GPE Place
+8 8 Conflict:Attack 15 17 GPE Place | 8 8 Conflict:Attack 2 2 PER Target
+7 7 Life:Die 8 11 PER Victim
+35 35 Life:Die 56 56 WEA Instrument | 35 35 Life:Die 36 56 PER Victim | 35 35 Life:Die 43 56 PER Agent | 35 35 Life:Die 28 30 TIM Time-Within | 44 44 Life:Die 43 56 PER Victim
+19 19 Conflict:Attack 1 1 NA NA
+10 10 Life:Die 10 13 PER Victim | 12 12 Life:Injure 10 13 PER Victim | 27 27 Conflict:Attack 6 7 PER Target | 27 27 Conflict:Attack 20 20 PER Target
+9 9 Conflict:Attack 1 1 NA NA | 34 34 Conflict:Attack 1 1 NA NA
+31 31 Conflict:Attack 1 1 NA NA
+20 20 Conflict:Attack 22 24 GPE Place | 20 20 Conflict:Attack 17 24 PER Target | 20 20 Conflict:Attack 19 19 GPE Attacker
+11 13 Conflict:Attack 4 27 PER Attacker | 11 13 Conflict:Attack 9 9 PER Target | 7 8 Life:Die 4 27 PER Victim | 7 8 Life:Die 9 9 PER Agent
+20 20 Life:Die 8 9 PER Victim | 20 20 Life:Die 22 24 PER Agent | 17 17 Conflict:Attack 8 9 PER Attacker | 17 17 Conflict:Attack 22 24 PER Target
+16 16 Conflict:Attack 21 23 PER Attacker | 16 16 Conflict:Attack 9 40 PER Target
+10 10 Life:Die 5 18 PER Victim | 10 10 Life:Die 18 18 GPE Place
+8 10 Life:Die 7 19 PER Victim | 33 33 Conflict:Attack 29 32 GPE Attacker | 33 33 Conflict:Attack 3 3 TIM Time-Within
+29 29 Justice:Execute 21 21 PER Person
+2 4 Life:Injure 5 7 PER Victim
+21 21 Life:Die 17 17 PER Victim | 21 21 Life:Die 27 31 PER Agent
+14 14 Life:Die 12 12 PER Victim
+12 13 Transaction:Transfer-Money 4 10 PER Recipient
+12 13 Transaction:Transfer-Money 15 20 PER Giver | 12 13 Transaction:Transfer-Money 2 7 PER Recipient
+52 52 Transaction:Transfer-Money 47 51 ORG Giver | 52 52 Transaction:Transfer-Money 2 5 PER Beneficiary
+12 12 Transaction:Transfer-Money 4 11 PER Giver
+39 39 Transaction:Transfer-Money 20 28 ORG Giver | 39 39 Transaction:Transfer-Money 30 32 ORG Giver | 39 39 Transaction:Transfer-Money 9 13 PER Recipient
+14 14 Transaction:Transfer-Money 5 8 ORG Giver | 14 14 Transaction:Transfer-Money 2 2 PER Recipient
+29 29 Transaction:Transfer-Money 31 36 PER Giver | 29 29 Transaction:Transfer-Money 4 6 PER Recipient
+38 38 Contact:Meet 4 11 PER Entity | 38 38 Contact:Meet 18 23 ORG Entity | 38 38 Contact:Meet 25 26 ORG Entity
+20 20 Movement:Transport 21 22 PER Artifact | 20 20 Movement:Transport 6 10 GPE Agent | 20 20 Movement:Transport 15 17 ORG Agent
+13 14 Conflict:Attack 12 12 GPE Place
+38 38 Conflict:Attack 32 32 GPE Place | 38 38 Conflict:Attack 35 35 WEA Instrument
+68 68 Conflict:Attack 40 40 GPE Place | 44 45 Contact:Phone-Write 22 27 PER Entity | 44 45 Contact:Phone-Write 47 53 ORG Entity
+25 25 Conflict:Attack 15 19 WEA Instrument
+22 23 Contact:Phone-Write 2 2 PER Entity | 22 23 Contact:Phone-Write 27 31 ORG Entity
+32 32 Conflict:Attack 24 27 GPE Attacker
+12 12 Conflict:Attack 1 1 NA NA
+28 28 Conflict:Attack 21 28 GPE Attacker
+63 63 Conflict:Attack 80 80 GPE Place | 63 63 Conflict:Attack 65 80 PER Target | 63 63 Conflict:Attack 65 80 PER Target | 63 63 Conflict:Attack 82 82 TIM Time-Within
+34 34 Conflict:Attack 30 30 ORG Attacker
+26 29 Conflict:Attack 24 25 GPE Place
+8 8 Contact:Phone-Write 5 5 PER Entity | 8 8 Contact:Phone-Write 10 17 PER Entity | 8 8 Contact:Phone-Write 3 3 TIM Time-After
+3 3 Personnel:Start-Position 2 2 PER Person | 3 3 Personnel:Start-Position 4 4 ORG Entity | 3 3 Personnel:Start-Position 5 7 TIM Time-Within
+23 23 Life:Die 2 3 PER Victim | 23 23 Life:Die 25 25 TIM Time-Within
+6 6 Transaction:Transfer-Ownership 8 9 VEH Artifact | 6 6 Transaction:Transfer-Ownership 2 2 PER Buyer
+16 16 Life:Injure 2 11 PER Victim
+17 17 Life:Die 21 22 FAC Place | 17 17 Life:Die 18 19 TIM Time-Within | 17 17 Life:Die 2 10 PER Victim
+11 11 Life:Die 2 9 PER Victim | 11 11 Life:Die 7 9 PER Victim
+14 14 Movement:Transport 9 10 VEH Vehicle | 14 14 Movement:Transport 4 5 PER Agent | 14 14 Movement:Transport 16 19 GPE Destination
+6 6 Movement:Transport 20 21 VEH Vehicle | 6 6 Movement:Transport 2 3 PER Artifact | 6 6 Movement:Transport 8 11 GPE Destination | 6 6 Movement:Transport 13 18 GPE Origin
+4 4 Movement:Transport 5 6 PER Artifact | 4 4 Movement:Transport 2 2 ORG Agent
+5 5 Business:Declare-Bankruptcy 8 8 ORG Org
+9 9 Conflict:Attack 1 1 NA NA | 12 12 Conflict:Attack 1 1 NA NA
+17 17 Life:Die 18 18 PER Victim | 17 17 Life:Die 9 10 PER Agent | 17 17 Life:Die 4 8 GPE Place | 17 17 Life:Die 19 20 TIM Time-Within | 13 13 Life:Die 14 15 PER Victim | 13 13 Life:Die 9 10 PER Agent | 13 13 Life:Die 4 8 GPE Place | 13 13 Life:Die 19 20 TIM Time-Within
+2 2 Life:Die 5 21 FAC Place
+2 2 Life:Die 5 9 TIM Time-Within
+5 5 Movement:Transport 2 2 PER Artifact | 5 5 Movement:Transport 10 13 FAC Destination
+10 10 Justice:Sue 1 1 NA NA
+8 8 Justice:Sue 10 11 ORG Defendant | 8 8 Justice:Sue 2 6 PER Plaintiff
+20 20 Transaction:Transfer-Money 7 8 ORG Giver | 20 20 Transaction:Transfer-Money 24 26 Numeric Money | 20 20 Transaction:Transfer-Money 2 5 PER Recipient
+10 10 Justice:Sue 6 6 PER Defendant | 10 10 Justice:Sue 12 14 ORG Plaintiff | 10 10 Justice:Sue 24 26 PER Plaintiff | 10 10 Justice:Sue 3 4 TIM Time-Within
+19 19 Justice:Appeal 30 31 GPE Place | 19 19 Justice:Appeal 21 31 ORG Adjudicator | 19 19 Justice:Appeal 8 15 ORG Plaintiff | 19 19 Justice:Appeal 16 17 TIM Time-Within
+10 10 Justice:Appeal 9 9 ORG Adjudicator
+16 16 Movement:Transport 2 11 PER Artifact | 16 16 Movement:Transport 23 25 GPE Destination | 21 21 Conflict:Attack 17 25 PER Attacker | 21 21 Conflict:Attack 23 25 GPE Place | 21 21 Conflict:Attack 17 25 PER Target
+4 5 Movement:Transport 12 14 GPE Origin
+23 24 Movement:Transport 21 22 PER Artifact | 23 24 Movement:Transport 7 9 GPE Origin
+26 26 Movement:Transport 21 22 PER Artifact | 26 26 Movement:Transport 28 30 TIM Time-Within | 99 99 Movement:Transport 93 96 PER Artifact | 99 99 Movement:Transport 101 101 GPE Origin | 99 99 Movement:Transport 88 92 TIM Time-Within | 84 84 Movement:Transport 81 83 PER Artifact | 84 84 Movement:Transport 101 101 GPE Origin | 84 84 Movement:Transport 85 85 TIM Time-Within
+20 20 Movement:Transport 19 19 PER Artifact | 20 20 Movement:Transport 22 22 GPE Origin
+28 28 Conflict:Attack 27 27 PER Attacker
+20 20 Movement:Transport 19 19 PER Artifact | 20 20 Movement:Transport 6 6 GPE Destination | 20 20 Movement:Transport 21 21 TIM Time-Within
+16 16 Movement:Transport 12 12 PER Artifact
+16 16 Contact:Meet 11 15 PER Entity | 16 16 Contact:Meet 17 17 TIM Time-Within
+5 5 Personnel:End-Position 5 13 PER Person | 5 5 Personnel:End-Position 6 7 ORG Entity | 5 5 Personnel:End-Position 8 9 Job-Title Position
+85 86 Business:End-Org 83 84 ORG Org
+20 20 Life:Die 22 23 GPE Place
+6 6 Conflict:Attack 1 1 NA NA
+19 19 Conflict:Attack 18 18 PER Attacker
+18 18 Conflict:Attack 20 21 PER Target | 18 18 Conflict:Attack 15 17 WEA Instrument | 18 18 Conflict:Attack 6 10 TIM Time-Before | 19 19 Life:Die 15 17 WEA Instrument | 19 19 Life:Die 20 21 PER Victim | 19 19 Life:Die 6 10 TIM Time-Before
+33 33 Conflict:Attack 21 23 GPE Place | 7 7 Justice:Arrest-Jail 14 16 ORG Agent | 7 7 Justice:Arrest-Jail 2 3 PER Person
+8 8 Life:Die 1 1 NA NA
+3 3 Life:Die 1 1 NA NA
+23 23 Conflict:Attack 20 22 WEA Instrument
+12 12 Life:Die 13 15 WEA Instrument
+30 30 Conflict:Attack 25 25 PER Attacker | 30 30 Conflict:Attack 39 41 WEA Instrument | 42 42 Conflict:Attack 39 41 WEA Instrument
+13 13 Conflict:Attack 16 17 PER Target | 13 13 Conflict:Attack 21 22 PER Target | 15 15 Life:Die 16 17 PER Victim | 10 10 Justice:Arrest-Jail 12 22 Crime Crime | 10 10 Justice:Arrest-Jail 2 4 TIM Time-Within | 19 20 Life:Injure 21 22 PER Victim
+2 2 Justice:Convict 2 13 PER Defendant
+4 4 Movement:Transport 6 8 GPE Destination | 4 4 Movement:Transport 11 13 GPE Origin | 4 4 Movement:Transport 2 3 PER Artifact | 4 4 Movement:Transport 9 9 TIM Time-Within | 16 16 Justice:Arrest-Jail 2 3 PER Person | 16 16 Justice:Arrest-Jail 21 29 PER Agent | 16 16 Justice:Arrest-Jail 17 19 TIM Time-Within
+8 8 Justice:Trial-Hearing 2 3 PER Defendant | 8 8 Justice:Trial-Hearing 14 20 Crime Crime | 8 8 Justice:Trial-Hearing 10 12 TIM Time-Within | 14 18 Conflict:Attack 19 20 PER Victim | 14 18 Conflict:Attack 2 3 PER Agent
+4 4 Justice:Sentence 2 2 PER Defendant | 4 4 Justice:Sentence 13 16 Sentence Sentence
+7 7 Life:Die 2 5 PER Victim | 7 7 Life:Die 17 19 FAC Place | 7 7 Life:Die 14 14 TIM Time-Within | 12 12 Life:Injure 9 10 PER Victim | 12 12 Life:Injure 17 19 FAC Place | 12 12 Life:Injure 14 14 TIM Time-Within | 20 20 Conflict:Attack 17 19 FAC Place | 20 20 Conflict:Attack 14 14 TIM Time-Within | 29 29 Life:Die 1 1 NA NA
+9 9 Life:Die 1 1 NA NA
+16 16 Life:Die 1 1 NA NA | 19 19 Life:Injure 18 18 PER Victim
+8 8 Life:Injure 1 1 NA NA
+5 5 Conflict:Attack 7 17 FAC Place | 5 5 Conflict:Attack 2 4 WEA Instrument | 38 38 Conflict:Attack 44 45 GPE Place | 38 38 Conflict:Attack 40 45 FAC Target
+11 11 Conflict:Attack 1 1 NA NA | 7 7 Life:Injure 1 1 NA NA
+6 6 Conflict:Attack 2 4 FAC Target
+12 12 Life:Injure 10 13 PER Victim | 7 8 Movement:Transport 10 13 PER Artifact | 7 8 Movement:Transport 5 6 PER Artifact
+25 25 Life:Die 22 23 PER Victim | 25 25 Life:Die 33 35 PER Agent | 25 25 Life:Die 44 48 GPE Place | 25 25 Life:Die 31 31 TIM Time-Within | 30 30 Life:Injure 27 29 PER Victim | 30 30 Life:Injure 33 35 PER Agent | 30 30 Life:Injure 44 48 GPE Place | 30 30 Life:Injure 31 31 TIM Time-Within | 34 34 Life:Die 37 37 PER Victim | 34 34 Life:Die 33 35 PER Agent | 34 34 Life:Die 44 48 GPE Place | 34 34 Life:Die 31 31 TIM Time-Within | 52 52 Conflict:Attack 54 54 GPE Place | 36 36 Conflict:Attack 33 35 PER Attacker | 36 36 Conflict:Attack 44 48 GPE Place | 36 36 Conflict:Attack 31 31 TIM Time-Within
+10 10 Movement:Transport 6 9 VEH Vehicle | 10 10 Movement:Transport 12 15 LOC Destination | 20 20 Conflict:Attack 26 31 LOC Place | 20 20 Conflict:Attack 19 19 VEH Instrument | 20 20 Conflict:Attack 21 24 WEA Instrument
+33 33 Conflict:Attack 21 29 FAC Place | 33 33 Conflict:Attack 32 32 WEA Instrument | 19 19 Life:Die 32 32 WEA Instrument | 19 19 Life:Die 6 17 PER Victim | 19 19 Life:Die 21 29 FAC Place | 36 36 Life:Injure 32 32 WEA Instrument | 36 36 Life:Injure 35 35 PER Victim
+5 5 Conflict:Attack 7 8 LOC Place | 5 5 Conflict:Attack 2 4 WEA Instrument | 12 12 Conflict:Attack 16 18 GPE Place | 12 12 Conflict:Attack 13 18 FAC Target | 12 12 Conflict:Attack 10 11 WEA Instrument
+13 13 Life:Die 2 9 PER Victim | 13 13 Life:Die 12 18 PER Victim | 13 13 Life:Die 16 16 GPE Place | 18 18 Conflict:Attack 16 16 GPE Place | 18 18 Conflict:Attack 2 9 PER Target | 18 18 Conflict:Attack 12 18 PER Target | 18 18 Conflict:Attack 17 17 VEH Target | 18 18 Conflict:Attack 29 30 PER Target | 18 18 Conflict:Attack 32 33 PER Target
+11 11 Movement:Transport 2 3 VEH Vehicle | 11 11 Movement:Transport 17 18 FAC Destination | 11 11 Movement:Transport 13 15 LOC Origin
+35 35 Conflict:Attack 34 34 WEA Instrument | 8 8 Conflict:Attack 2 2 GPE Attacker | 8 8 Conflict:Attack 10 10 LOC Place | 8 8 Conflict:Attack 12 17 VEH Instrument | 8 8 Conflict:Attack 12 17 VEH Instrument | 24 24 Contact:Meet 20 23 PER Entity | 24 24 Contact:Meet 25 27 ORG Entity
+6 6 Conflict:Attack 1 1 NA NA | 22 22 Conflict:Attack 19 19 GPE Attacker | 22 22 Conflict:Attack 24 24 GPE Place
+4 4 Life:Die 2 9 PER Victim | 4 4 Life:Die 2 9 PER Agent | 4 4 Life:Die 8 8 GPE Place
+28 28 Life:Die 22 22 PER Agent | 29 29 Conflict:Attack 22 22 PER Attacker | 35 35 Conflict:Attack 42 43 GPE Place | 35 35 Conflict:Attack 37 43 FAC Target | 35 35 Conflict:Attack 33 34 TIM Time-Within
+35 35 Conflict:Attack 1 1 NA NA | 4 4 Movement:Transport 2 3 PER Artifact | 4 4 Movement:Transport 6 21 LOC Destination | 23 23 Justice:Arrest-Jail 24 32 PER Person | 23 23 Justice:Arrest-Jail 24 32 PER Person | 23 23 Justice:Arrest-Jail 6 21 LOC Place | 23 23 Justice:Arrest-Jail 2 3 PER Agent
+19 19 Conflict:Attack 1 1 NA NA | 29 29 Conflict:Attack 27 28 ORG Attacker | 29 29 Conflict:Attack 31 33 LOC Place | 29 29 Conflict:Attack 35 36 TIM Time-Within
+8 8 Conflict:Attack 1 1 NA NA | 11 11 Conflict:Attack 1 1 NA NA | 24 24 Life:Die 22 23 PER Victim
+17 17 Conflict:Attack 19 19 GPE Place | 17 17 Conflict:Attack 14 14 TIM Time-Within | 10 10 Conflict:Attack 12 12 PER Target
+7 7 Conflict:Attack 1 1 NA NA | 33 33 Life:Die 17 23 GPE Agent | 33 33 Life:Die 17 23 ORG Agent | 33 33 Life:Die 38 38 TIM Time-Within | 33 33 Life:Die 35 36 PER Victim
+7 7 Conflict:Attack 9 9 GPE Place | 7 7 Conflict:Attack 6 6 WEA Instrument | 7 7 Conflict:Attack 16 18 TIM Time-After | 23 23 Personnel:Start-Position 9 9 GPE Place | 23 23 Personnel:Start-Position 16 18 TIM Time-Before
+5 5 Conflict:Attack 7 10 PER Attacker | 5 5 Conflict:Attack 15 17 LOC Place | 5 5 Conflict:Attack 20 22 PER Target | 5 5 Conflict:Attack 4 4 TIM Time-Within | 19 19 Life:Die 20 22 PER Victim | 19 19 Life:Die 7 10 PER Agent | 19 19 Life:Die 15 17 LOC Place | 19 19 Life:Die 4 4 TIM Time-Within | 9 9 Life:Die 12 12 PER Victim | 9 9 Life:Die 7 10 PER Agent | 9 9 Life:Die 15 17 LOC Place | 9 9 Life:Die 4 4 TIM Time-Within | 11 11 Life:Die 12 12 PER Victim | 11 11 Life:Die 7 10 PER Agent | 11 11 Life:Die 15 17 LOC Place | 11 11 Life:Die 4 4 TIM Time-Within
+13 13 Conflict:Attack 1 1 NA NA | 19 19 Conflict:Attack 1 1 NA NA
+27 27 Conflict:Attack 24 24 GPE Place | 27 27 Conflict:Attack 23 25 VEH Target | 21 21 Conflict:Attack 1 1 NA NA
+12 12 Conflict:Attack 38 39 PER Attacker | 12 12 Conflict:Attack 17 17 GPE Place | 12 12 Conflict:Attack 14 17 PER Target
+15 15 Conflict:Attack 1 1 NA NA | 37 37 Life:Die 34 36 PER Victim | 37 37 Life:Die 39 41 TIM Time-Within | 37 37 Life:Die 43 45 TIM Time-Within
+25 25 Conflict:Attack 13 14 GPE Attacker
+4 4 Conflict:Attack 3 3 VEH Target | 4 4 Conflict:Attack 6 9 TIM Time-After | 15 15 Conflict:Attack 10 11 PER Attacker | 15 15 Conflict:Attack 17 22 GPE Place | 15 15 Conflict:Attack 21 22 LOC Place | 15 15 Conflict:Attack 24 39 PER Target | 35 35 Conflict:Attack 37 39 GPE Place | 34 34 Life:Die 37 39 GPE Place
+7 7 Conflict:Attack 6 6 ORG Attacker | 24 24 Contact:Meet 23 23 GPE Entity
+21 21 Conflict:Attack 1 1 NA NA
+25 25 Conflict:Attack 24 24 LOC Place | 25 25 Conflict:Attack 2 3 PER Target | 25 25 Conflict:Attack 6 8 PER Target | 25 25 Conflict:Attack 10 17 PER Target | 25 25 Conflict:Attack 21 21 TIM Time-Within | 19 19 Life:Die 2 3 PER Victim | 19 19 Life:Die 6 8 PER Victim | 19 19 Life:Die 10 17 PER Victim | 19 19 Life:Die 24 24 LOC Place | 19 19 Life:Die 21 21 TIM Time-Within
+8 8 Conflict:Attack 6 7 PER Attacker | 8 8 Conflict:Attack 17 25 GPE Place | 8 8 Conflict:Attack 10 25 PER Target | 8 8 Conflict:Attack 4 4 TIM Time-Within | 9 9 Life:Die 6 7 PER Agent | 9 9 Life:Die 10 25 PER Victim | 9 9 Life:Die 17 25 GPE Place | 9 9 Life:Die 4 4 TIM Time-Within
+25 25 Life:Injure 7 15 PER Victim | 25 25 Life:Injure 19 20 PER Victim | 25 25 Life:Injure 22 23 PER Victim | 25 25 Life:Injure 29 29 GPE Agent | 25 25 Life:Injure 32 40 GPE Place | 25 25 Life:Injure 26 27 TIM Time-Within | 30 30 Conflict:Attack 29 29 GPE Attacker | 30 30 Conflict:Attack 32 40 GPE Place | 30 30 Conflict:Attack 7 15 PER Target | 30 30 Conflict:Attack 19 20 PER Target | 30 30 Conflict:Attack 22 23 PER Target | 30 30 Conflict:Attack 26 27 TIM Time-At-End
+26 26 Transaction:Transfer-Money 2 11 ORG Giver | 26 26 Transaction:Transfer-Money 13 17 ORG Giver | 26 26 Transaction:Transfer-Money 19 21 ORG Giver | 26 26 Transaction:Transfer-Money 27 29 Numeric Money
+3 3 Transaction:Transfer-Money 1 1 NA NA | 17 17 Justice:Sue 33 33 ORG Defendant | 17 17 Justice:Sue 19 19 PER Plaintiff
+23 23 Transaction:Transfer-Money 12 16 ORG Giver | 23 23 Transaction:Transfer-Money 18 20 ORG Giver | 23 23 Transaction:Transfer-Money 22 22 ORG Giver | 23 23 Transaction:Transfer-Money 24 26 Numeric Money
+14 14 Justice:Sue 18 19 ORG Adjudicator | 14 14 Justice:Sue 2 3 PER Plaintiff | 14 14 Justice:Sue 5 6 PER Plaintiff
+3 3 Justice:Sue 5 22 PER Plaintiff | 3 3 Justice:Sue 25 36 PER Plaintiff
+12 12 Transaction:Transfer-Money 24 26 Numeric Money | 12 12 Transaction:Transfer-Money 18 19 TIM Time-After
+9 9 Justice:Convict 10 23 PER Defendant | 9 9 Justice:Convict 25 36 Crime Crime | 9 9 Justice:Convict 7 7 GPE Place | 9 9 Justice:Convict 6 8 PER Adjudicator | 9 9 Justice:Convict 3 4 TIM Time-Within
+9 9 Justice:Sentence 6 7 PER Defendant | 9 9 Justice:Sentence 11 14 Sentence Sentence | 9 9 Justice:Sentence 16 26 Sentence Sentence | 9 9 Justice:Sentence 28 32 Crime Crime | 9 9 Justice:Sentence 2 4 TIM Time-At-End | 38 38 Transaction:Transfer-Money 39 42 PER Giver | 38 38 Transaction:Transfer-Money 43 45 Numeric Money | 38 38 Transaction:Transfer-Money 41 42 ORG Recipient
+7 7 Justice:Charge-Indict 2 4 ORG Defendant | 7 7 Justice:Charge-Indict 9 11 GPE Place
+19 19 Transaction:Transfer-Money 2 6 ORG Giver | 19 19 Transaction:Transfer-Money 12 18 Numeric Money
+8 8 Transaction:Transfer-Money 10 12 Numeric Money
+39 39 Conflict:Attack 30 30 GPE Attacker
+4 4 Contact:Meet 6 9 FAC Place | 4 4 Contact:Meet 15 15 GPE Entity | 4 4 Contact:Meet 17 17 GPE Entity | 4 4 Contact:Meet 20 24 GPE Entity | 4 4 Contact:Meet 20 24 GPE Entity | 4 4 Contact:Meet 11 12 TIM Time-Within | 37 38 Movement:Transport 39 44 VEH Artifact | 37 38 Movement:Transport 28 30 GPE Agent | 37 38 Movement:Transport 46 48 LOC Destination
+20 20 Contact:Meet 4 5 GPE Entity
+32 32 Contact:Meet 25 25 TIM Time-Within
+41 41 Contact:Meet 45 47 TIM Time-Within
+37 37 Contact:Meet 21 21 PER Entity | 37 37 Contact:Meet 34 35 TIM Time-Holds
+7 7 Contact:Meet 4 4 GPE Entity | 7 7 Contact:Meet 9 13 GPE Entity
+27 29 Conflict:Attack 23 25 GPE Attacker | 27 29 Conflict:Attack 34 34 GPE Place
+14 14 Conflict:Attack 16 16 GPE Place | 38 38 Conflict:Attack 31 31 GPE Place
+6 6 Movement:Transport 7 13 VEH Artifact | 6 6 Movement:Transport 2 4 GPE Agent | 20 20 Movement:Transport 40 41 LOC Origin | 20 20 Movement:Transport 36 38 LOC Destination | 20 20 Movement:Transport 2 4 GPE Agent | 28 28 Conflict:Attack 2 4 GPE Attacker | 28 28 Conflict:Attack 36 38 LOC Target | 28 28 Conflict:Attack 40 41 LOC Target | 28 28 Conflict:Attack 7 13 VEH Instrument | 28 28 Conflict:Attack 21 34 VEH Instrument
+11 11 Personnel:End-Position 2 8 PER Person | 11 11 Personnel:End-Position 15 19 ORG Entity | 11 11 Personnel:End-Position 13 13 Job-Title Position | 11 11 Personnel:End-Position 10 10 TIM Time-Within
+11 12 Personnel:Start-Position 6 33 PER Person | 11 12 Personnel:Start-Position 13 19 Job-Title Position | 11 12 Personnel:Start-Position 33 33 TIM Time-Within | 11 12 Personnel:Start-Position 24 31 ORG Entity
+13 13 Transaction:Transfer-Ownership 15 22 ORG Artifact | 13 13 Transaction:Transfer-Ownership 32 33 ORG Seller | 13 13 Transaction:Transfer-Ownership 6 12 Numeric Price | 13 13 Transaction:Transfer-Ownership 24 27 ORG Buyer | 13 13 Transaction:Transfer-Ownership 29 30 TIM Time-Within
+21 21 Personnel:Start-Position 10 19 PER Person | 21 21 Personnel:Start-Position 3 3 GPE Place | 21 21 Personnel:Start-Position 30 31 ORG Entity | 21 21 Personnel:Start-Position 25 25 Job-Title Position | 21 21 Personnel:Start-Position 27 31 Job-Title Position
+35 35 Personnel:End-Position 36 36 PER Person | 35 35 Personnel:End-Position 42 46 ORG Entity | 35 35 Personnel:End-Position 40 46 Job-Title Position
+40 40 Personnel:End-Position 42 52 PER Person | 40 40 Personnel:End-Position 2 5 ORG Entity | 40 40 Personnel:End-Position 53 54 TIM Time-Within
+21 21 Transaction:Transfer-Ownership 23 31 ORG Artifact | 21 21 Transaction:Transfer-Ownership 10 13 ORG Seller
+18 18 Conflict:Demonstrate 10 11 FAC Place | 18 18 Conflict:Demonstrate 2 7 PER Entity | 18 18 Conflict:Demonstrate 16 16 TIM Time-Within | 21 21 Conflict:Attack 23 23 GPE Place | 30 31 Conflict:Attack 27 27 PER Attacker
+31 31 Conflict:Attack 15 17 GPE Attacker | 18 18 Conflict:Attack 15 17 GPE Attacker
+2 4 Conflict:Demonstrate 19 25 GPE Place | 2 4 Conflict:Demonstrate 31 32 GPE Place | 2 4 Conflict:Demonstrate 34 34 GPE Place | 2 4 Conflict:Demonstrate 36 38 LOC Place | 7 7 Conflict:Attack 12 15 PER Target
+12 12 Conflict:Attack 1 1 NA NA | 9 9 Conflict:Demonstrate 14 26 GPE Place
+27 27 Conflict:Attack 1 1 NA NA
+26 26 Conflict:Attack 21 21 GPE Attacker
+20 20 Conflict:Attack 12 14 ORG Attacker
+39 39 Conflict:Attack 1 1 NA NA | 50 50 Life:Die 1 1 NA NA
+24 24 Conflict:Attack 1 1 NA NA | 13 13 Conflict:Attack 15 15 GPE Place | 13 13 Conflict:Attack 12 12 WEA Instrument | 13 13 Conflict:Attack 7 7 TIM Time-At-Beginning | 13 13 Conflict:Attack 7 11 TIM Time-Within
+9 9 Conflict:Attack 20 22 GPE Place | 18 18 Conflict:Attack 20 22 GPE Place
+12 12 Conflict:Attack 1 1 NA NA | 19 19 Conflict:Attack 7 7 GPE Attacker | 19 19 Conflict:Attack 25 27 LOC Place | 19 19 Conflict:Attack 21 27 PER Target
+14 14 Conflict:Attack 35 42 GPE Attacker | 14 14 Conflict:Attack 16 16 GPE Place | 19 19 Conflict:Attack 1 1 NA NA | 40 40 Conflict:Attack 35 42 GPE Attacker
+5 5 Conflict:Attack 7 10 GPE Attacker | 5 5 Conflict:Attack 15 15 GPE Place | 5 5 Conflict:Attack 21 27 PER Target | 5 5 Conflict:Attack 21 27 PER Target | 19 19 Conflict:Attack 7 10 GPE Attacker | 19 19 Conflict:Attack 15 15 GPE Place | 19 19 Conflict:Attack 21 27 PER Target | 19 19 Conflict:Attack 21 27 PER Target | 13 13 Conflict:Attack 1 1 NA NA
+3 3 Conflict:Attack 1 1 NA NA
+18 18 Conflict:Attack 17 17 GPE Attacker
+14 14 Conflict:Attack 10 10 GPE Attacker | 25 25 Conflict:Attack 17 17 ORG Attacker | 18 19 Conflict:Attack 17 17 ORG Attacker
+17 17 Life:Injure 7 10 PER Victim | 17 17 Life:Injure 12 15 PER Victim | 17 17 Life:Injure 3 5 GPE Place | 26 26 Conflict:Demonstrate 28 37 FAC Place | 26 26 Conflict:Demonstrate 21 25 PER Entity | 19 19 Conflict:Attack 7 10 PER Attacker | 19 19 Conflict:Attack 12 15 PER Attacker | 19 19 Conflict:Attack 28 37 FAC Place
+22 22 Conflict:Demonstrate 24 43 FAC Place | 22 22 Conflict:Demonstrate 6 20 PER Entity
+10 10 Conflict:Demonstrate 12 46 FAC Place | 10 10 Conflict:Demonstrate 2 8 PER Entity
+2 4 Conflict:Demonstrate 1 1 NA NA
+10 11 Life:Injure 6 8 PER Victim | 10 11 Life:Injure 3 4 GPE Place | 20 22 Conflict:Demonstrate 13 17 PER Entity
+8 8 Conflict:Demonstrate 3 3 GPE Place | 8 8 Conflict:Demonstrate 10 23 FAC Place | 8 8 Conflict:Demonstrate 5 7 PER Entity
+21 21 Justice:Appeal 2 2 GPE Place | 21 21 Justice:Appeal 23 25 ORG Adjudicator | 21 21 Justice:Appeal 18 20 PER Plaintiff | 15 15 Life:Die 2 2 GPE Place | 6 6 Justice:Execute 2 2 GPE Agent | 6 6 Justice:Execute 8 16 PER Person
+6 6 Justice:Execute 5 5 GPE Agent | 6 6 Justice:Execute 7 7 PER Person | 6 6 Justice:Execute 8 8 TIM Time-Within | 21 21 Justice:Appeal 20 20 PER Plaintiff
+7 7 Justice:Appeal 2 4 ORG Adjudicator | 7 7 Justice:Appeal 13 17 PER Plaintiff
+10 10 Justice:Appeal 2 5 PER Plaintiff
+24 24 Justice:Execute 16 17 PER Person
+8 8 Justice:Convict 2 4 PER Defendant | 8 8 Justice:Convict 10 10 Crime Crime
+13 13 Life:Die 8 8 PER Victim
+10 10 Justice:Appeal 2 3 PER Plaintiff | 25 25 Justice:Sentence 28 30 ORG Adjudicator | 25 25 Justice:Sentence 2 3 PER Defendant | 25 25 Justice:Sentence 24 30 Sentence Sentence
+5 5 Justice:Convict 4 7 PER Defendant | 5 5 Justice:Convict 7 7 Crime Crime | 13 13 Life:Die 1 1 NA NA
+9 9 Justice:Sentence 2 3 ORG Adjudicator | 9 9 Justice:Sentence 15 18 PER Defendant | 9 9 Justice:Sentence 2 2 GPE Place | 9 9 Justice:Sentence 8 12 Sentence Sentence | 12 12 Life:Die 15 18 PER Victim | 12 12 Life:Die 2 2 GPE Place
+13 13 Justice:Convict 13 15 PER Defendant | 13 13 Justice:Convict 14 14 Crime Crime | 13 13 Justice:Convict 7 7 GPE Place | 25 25 Life:Die 1 1 NA NA
+6 6 Life:Die 1 1 NA NA
+25 25 Justice:Convict 23 30 PER Defendant | 25 25 Justice:Convict 28 28 Crime Crime | 25 25 Justice:Convict 10 30 GPE Place | 25 25 Justice:Convict 30 30 TIM Time-Within | 15 15 Justice:Execute 28 28 Crime Crime | 15 15 Justice:Execute 23 30 PER Person | 15 15 Justice:Execute 10 30 GPE Place | 15 15 Justice:Execute 20 21 TIM Time-Within | 5 5 Life:Die 1 1 NA NA | 28 28 Life:Die 23 30 PER Agent
+4 4 Conflict:Attack 2 5 PER Attacker
+7 7 Movement:Transport 2 6 PER Artifact | 7 7 Movement:Transport 9 9 GPE Origin | 7 7 Movement:Transport 10 10 TIM Time-Within
+18 19 Movement:Transport 2 17 PER Artifact | 18 19 Movement:Transport 21 33 FAC Destination | 41 42 Movement:Transport 43 46 PER Artifact | 41 42 Movement:Transport 43 46 VEH Artifact | 41 42 Movement:Transport 39 39 FAC Destination
+32 32 Movement:Transport 3 29 PER Artifact | 32 32 Movement:Transport 42 43 LOC Destination | 32 32 Movement:Transport 35 38 FAC Origin | 32 32 Movement:Transport 40 40 TIM Time-Within
+3 3 Conflict:Attack 12 12 GPE Attacker | 3 3 Conflict:Attack 5 5 GPE Place
+15 15 Movement:Transport 26 26 WEA Artifact | 15 15 Movement:Transport 31 31 PER Artifact | 15 15 Movement:Transport 3 4 ORG Agent | 15 15 Movement:Transport 17 17 GPE Destination | 49 49 Conflict:Attack 48 48 GPE Attacker | 49 49 Conflict:Attack 3 4 ORG Target | 49 49 Conflict:Attack 38 49 TIM Time-Within
+32 32 Conflict:Attack 22 24 PER Attacker
+10 10 Conflict:Attack 4 4 GPE Attacker
+23 23 Conflict:Attack 2 2 GPE Attacker | 23 23 Conflict:Attack 25 25 GPE Place
+9 9 Conflict:Attack 5 5 GPE Attacker
+4 4 Movement:Transport 3 3 PER Artifact | 4 4 Movement:Transport 6 6 GPE Destination | 4 4 Movement:Transport 7 8 TIM Time-Within | 13 13 Contact:Meet 17 21 FAC Place | 13 13 Contact:Meet 3 3 PER Entity | 13 13 Contact:Meet 15 15 PER Entity | 13 13 Contact:Meet 10 21 TIM Time-Within
+52 52 Conflict:Attack 27 27 GPE Attacker
+11 11 Contact:Meet 2 2 PER Entity | 11 11 Contact:Meet 4 4 PER Entity | 11 11 Contact:Meet 13 16 TIM Time-Within
+12 12 Conflict:Attack 5 10 PER Attacker | 12 12 Conflict:Attack 14 27 PER Attacker | 12 12 Conflict:Attack 26 27 PER Attacker
+11 11 Conflict:Attack 1 1 NA NA
+10 10 Conflict:Attack 4 4 GPE Attacker | 10 10 Conflict:Attack 39 39 GPE Place
+30 30 Personnel:End-Position 14 14 PER Person

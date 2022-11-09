@@ -1,0 +1,13 @@
+VEH
+PER
+LOC
+Job-Title
+ORG
+NA
+GPE
+FAC
+TIM
+Numeric
+WEA
+Sentence
+Crime
