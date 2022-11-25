@@ -7,6 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/1W8e4Hs79pu25biKKh9mK6h6-jE2XEGA1
 """
 
+
+
 import math
 import torch
 import torch.autograd as autograd
@@ -40,20 +42,21 @@ def custom_print(*msg):
             print(msg[i], ' ', end='')
             logger.write(str(msg[i]))
 
-def get_data(src_lines, trg_lines, pos_lines, ent_lines, dep_lines, datatype):
+# def get_data(src_lines, trg_lines, pos_lines, ent_lines, dep_lines, datatype):
+def get_data(src_lines, trg_lines, datatype):
     samples = []
     uid = 1
     for i in range(0, len(src_lines)):#for each line
         src_line = src_lines[i].strip()
         trg_line = trg_lines[i].strip()
-        pos_line = pos_lines[i].strip()
-        ent_line = ent_lines[i].strip()
-        dep_line = dep_lines[i].strip()
+        # pos_line = pos_lines[i].strip()
+        # ent_line = ent_lines[i].strip()
+        # dep_line = dep_lines[i].strip()
 
         src_words = src_line.split()
-        word_pos_tags = pos_line.split()####
-        word_ent_tags = ent_line.split()####
-        word_dep_tags = dep_line.split()
+        # word_pos_tags = pos_line.split()####
+        # word_ent_tags = ent_line.split()####
+        # word_dep_tags = dep_line.split()
 
         trg_rels = []#holds relations present in a sentence
         trg_events=[]#holds events present in a sentence
@@ -88,8 +91,12 @@ def get_data(src_lines, trg_lines, pos_lines, ent_lines, dep_lines, datatype):
             #print(trg_line)
             continue
 
-        sample = Sample(Id=uid, SrcLen=len(src_words), SrcWords=src_words, PosTags=word_pos_tags, EntTags=word_ent_tags, DepTags=word_dep_tags, TrgLen=len(trg_rels), TrgRels=trg_rels,
+        # sample = Sample(Id=uid, SrcLen=len(src_words), SrcWords=src_words, PosTags=word_pos_tags, EntTags=word_ent_tags, DepTags=word_dep_tags, TrgLen=len(trg_rels), TrgRels=trg_rels,
+        #                 TrgPointers=trg_pointers, eventTypes=trg_events, argTypes=trg_args)#recordclass("Sample", "Id SrcLen SrcWords TrgLen TrgRels eventTypes argTypes TrgPointers")
+        sample = Sample(Id=uid, SrcLen=len(src_words), SrcWords=src_words, TrgLen=len(trg_rels), TrgRels=trg_rels,
                         TrgPointers=trg_pointers, eventTypes=trg_events, argTypes=trg_args)#recordclass("Sample", "Id SrcLen SrcWords TrgLen TrgRels eventTypes argTypes TrgPointers")
+
+        
         samples.append(sample)
         uid += 1
     return samples
@@ -98,7 +105,8 @@ def get_data(src_lines, trg_lines, pos_lines, ent_lines, dep_lines, datatype):
 # In[113]:
 
 
-def read_data(src_file, trg_file, pos_file, ent_file, dep_file, datatype):
+# def read_data(src_file, trg_file, pos_file, ent_file, dep_file, datatype):
+def read_data(src_file, trg_file, datatype):
     reader = open(src_file)
     src_lines = reader.readlines()
     reader.close()
@@ -107,24 +115,25 @@ def read_data(src_file, trg_file, pos_file, ent_file, dep_file, datatype):
     trg_lines = reader.readlines()
     reader.close()
 
-    reader = open(pos_file)
-    pos_lines = reader.readlines()
-    reader.close()
+    # reader = open(pos_file)
+    # pos_lines = reader.readlines()
+    # reader.close()
 
-    reader = open(ent_file)
-    ent_lines = reader.readlines()
-    reader.close()
+    # reader = open(ent_file)
+    # ent_lines = reader.readlines()
+    # reader.close()
 
-    reader = open(dep_file)
-    dep_lines = reader.readlines()
-    reader.close()
+    # reader = open(dep_file)
+    # dep_lines = reader.readlines()
+    # reader.close()
     
     # l = 1000
     # src_lines = src_lines[0:min(l, len(src_lines))]
     # trg_lines = trg_lines[0:min(l, len(trg_lines))]
     # adj_lines = adj_lines[0:min(l, len(adj_lines))]
 
-    data = get_data(src_lines, trg_lines, pos_lines, ent_lines, dep_lines, datatype)#call get_data()
+    # data = get_data(src_lines, trg_lines, pos_lines, ent_lines, dep_lines, datatype)#call get_data()
+    data = get_data(src_lines, trg_lines, datatype)#call get_data()
     return data#list of records, records are of type Sample
 
 
@@ -309,8 +318,8 @@ def get_pred_triples(rel, arg1s, arg1e, arg2s, arg2e, eTypes, aTypes, src_words)
         if arg1 == arg2:
             continue
         touplet = (arg1, eventIdxToName[ev], arg2, argIdxToName[at], relIdxToName[r])
-        if (touplet[0], touplet[1], touplet[2]) in [(t[0], t[1],t[2]) for t in touples]:#same (trigger, argument) pair can not have two different role
-        	continue
+        if (touplet[0], touplet[1], touplet[2]) in [(t[0], t[1],t[2]) for t in touples] :#same (trigger, argument) pair can not have two different role
+            continue
         all_touples.append(touplet)
         if not is_full_match(touplet, touples):
             touples.append(touplet)
@@ -413,7 +422,7 @@ def load_word_embedding(embed_file, vocab):
     custom_print('embed dictionary length:', len(embed_vocab))
     return embed_vocab, np.array(embed_matrix, dtype=np.float32)
 
-def build_vocab(tr_data, dv_data, ts_data, save_vocab, embedding_file):
+def build_vocab(tr_data, dv_data, ts_data, save_vocab):
     vocab = OrderedDict()
     char_v = OrderedDict()
     char_v['<PAD>'] = 0
@@ -443,29 +452,15 @@ def build_vocab(tr_data, dv_data, ts_data, save_vocab, embedding_file):
 
     word_v, embed_matrix = load_word_embedding(embedding_file, vocab)
     output = open(save_vocab, 'wb')
-    pickle.dump([word_v, char_v, pos_vocab, ent_vocab, dep_vocab], output)
+    pickle.dump([char_v], output)
     output.close()
-    return word_v, char_v, embed_matrix
+    return char_v
 
-def build_tags(file1, file2, file3):
-    lines = open(file1).readlines() + open(file2).readlines() + open(file3).readlines()
-    pos_vocab = OrderedDict()
-    pos_vocab['<PAD>'] = 0
-    pos_vocab['<UNK>'] = 1
-    k = 2
-    for line in lines:
-        line = line.strip()
-        tags = line.split(' ')
-        for tag in tags:
-            if tag not in pos_vocab:
-                pos_vocab[tag] = k
-                k += 1
-    return pos_vocab
 
 def load_vocab(vocab_file):
     with open(vocab_file, 'rb') as f:
-        embed_vocab, char_vocab, pos_vocab, dep_vocab = pickle.load(f)
-    return embed_vocab, char_vocab, pos_vocab, ent_vocab, dep_vocab
+        embed_vocab, char_vocab = pickle.load(f)
+    return embed_vocab, char_vocab
 
 def get_max_len(sample_batch):
     src_max_len = len(sample_batch[0].SrcWords)
@@ -486,46 +481,6 @@ def get_words_index_seq(words, max_len):
     bert_mask = [1 for idx in range(len(words) + 2)] + [0 for idx in range(max_len - len(words))]
     return bert_ids, bert_mask
 
-# In[128]:
-
-
-def get_pos_tag_index_seq(pos_seq, max_len):
-    seq = list()
-    for t in pos_seq:
-        if t in pos_vocab:
-            seq.append(pos_vocab[t])
-        else:
-            seq.append(pos_vocab['<UNK>'])
-    pad_len = max_len - len(seq)
-    for i in range(0, pad_len):
-        seq.append(pos_vocab['<PAD>'])
-    return seq
-
-
-def get_ent_tag_index_seq(ent_seq, max_len):
-    seq = list()
-    for t in ent_seq:
-        if t in ent_vocab:
-            seq.append(ent_vocab[t])
-        else:
-            seq.append(ent_vocab['<UNK>'])
-    pad_len = max_len - len(seq)
-    for i in range(0, pad_len):
-        seq.append(ent_vocab['<PAD>'])
-    return seq
-
-
-def get_dep_tag_index_seq(dep_seq, max_len):
-    seq = list()
-    for t in dep_seq:
-        if t in dep_vocab:
-            seq.append(dep_vocab[t])
-        else:
-            seq.append(dep_vocab['<UNK>'])
-    pad_len = max_len - len(seq)
-    for i in range(0, pad_len):
-        seq.append(dep_vocab['<PAD>'])
-    return seq
 
 
 # In[129]:
@@ -711,9 +666,6 @@ def get_batch_data(cur_samples, is_training=False):
     decoder_input_list = list()
     #adj_lst = []
     positional_index_list = []#each element is a sequence of positional index of the words in a sentence
-    src_pos_tag_seq = list()#pos tag
-    src_ent_tag_seq = list()#ent tag
-    src_dep_tag_seq = list()#dep tag
     rel_seq = list()
     event_seq=list()#******
     arg_seq=list()#********
@@ -734,9 +686,9 @@ def get_batch_data(cur_samples, is_training=False):
         #cur_masked_adj[:len(sample.SrcWords), :len(sample.SrcWords)] = sample.AdjMat#skip
         #adj_lst.append(cur_masked_adj)#skip
         positional_index_list.append(get_positional_index(len(sample.SrcWords), batch_src_max_len))#positional index of each word in the source sentence padded with 0
-        src_pos_tag_seq.append(get_pos_tag_index_seq(sample.PosTags, batch_src_max_len))#each element is [list of tag index of each word in the sentence of length max_src_len]
-        src_ent_tag_seq.append(get_ent_tag_index_seq(sample.EntTags, batch_src_max_len))######
-        src_dep_tag_seq.append(get_dep_tag_index_seq(sample.DepTags, batch_src_max_len))
+        # src_pos_tag_seq.append(get_pos_tag_index_seq(sample.PosTags, batch_src_max_len))#each element is [list of tag index of each word in the sentence of length max_src_len]
+        # src_ent_tag_seq.append(get_ent_tag_index_seq(sample.EntTags, batch_src_max_len))######
+        # src_dep_tag_seq.append(get_dep_tag_index_seq(sample.DepTags, batch_src_max_len))
         if is_training:
             trigger_start_seq.append(get_padded_pointers_trig(sample.TrgPointers, 0, batch_trg_max_len))#list of all the start index of the tuple's event in a sentence with padding -1 (to max_trg_len)
             trigger_end_seq.append(get_padded_pointers_trig(sample.TrgPointers, 1, batch_trg_max_len))#list of all the end index of the tuple's event in a sentence with pad -1 (to max_trg_len)
@@ -757,9 +709,6 @@ def get_batch_data(cur_samples, is_training=False):
 
     return {'src_words': np.array(src_words_list, dtype=np.float32),#list of word_index
             'bert_mask': np.array(bert_mask_list),
-            'pos_tag_seq': np.array(src_pos_tag_seq),#list of pos tag index
-            'ent_tag_seq': np.array(src_ent_tag_seq),#list of ent tag index (pad, unk, 0, 1)
-            'dep_tag_seq': np.array(src_dep_tag_seq),#list of dep tag index
             'positional_seq': np.array(positional_index_list),#list of word_position_index
             'src_words_mask': np.array(src_words_mask_list),#list of source word masks [0,0,0,1,1]
             'src_chars': np.array(src_char_seq),#list of source character sequences with padding for CNN operation
@@ -804,42 +753,6 @@ class CharEmbeddings(nn.Module):
         char_embeds = self.dropout(char_embeds)
         return char_embeds
 
-
-# In[141]:
-
-
-class POSEmbeddings(nn.Module):
-    def __init__(self, tag_len, tag_dim, drop_out_rate):
-        super(POSEmbeddings, self).__init__()
-        self.embeddings = nn.Embedding(tag_len, tag_dim, padding_idx=0)
-        self.dropout = nn.Dropout(drop_out_rate)
-
-    def forward(self, pos_seq):
-        pos_embeds = self.embeddings(pos_seq)
-        pos_embeds = self.dropout(pos_embeds)
-        return pos_embeds
-
-class ENTEmbeddings(nn.Module):
-    def __init__(self, tag_len, tag_dim, drop_out_rate):
-        super(ENTEmbeddings, self).__init__()
-        self.embeddings = nn.Embedding(tag_len, tag_dim, padding_idx=0)
-        self.dropout = nn.Dropout(drop_out_rate)
-
-    def forward(self, ent_seq):
-        ent_embeds = self.embeddings(ent_seq)
-        ent_embeds = self.dropout(ent_embeds)
-        return ent_embeds
-
-class DEPEmbeddings(nn.Module):
-    def __init__(self, tag_len, tag_dim, drop_out_rate):
-        super(DEPEmbeddings, self).__init__()
-        self.embeddings = nn.Embedding(tag_len, tag_dim, padding_idx=0)
-        self.dropout = nn.Dropout(drop_out_rate)
-
-    def forward(self, dep_seq):
-        dep_embeds = self.embeddings(dep_seq)
-        dep_embeds = self.dropout(dep_embeds)
-        return dep_embeds
 
 
 class Attention(nn.Module):
@@ -890,12 +803,10 @@ class Encoder(nn.Module):
         self.is_bidirectional = is_bidirectional#True
         self.drop_rate = drop_out_rate#0.3
         self.bert_vec = BERT(drop_out_rate)
-        #self.word_embeddings = WordEmbeddings(len(word_vocab), word_embed_dim, word_embed_matrix, drop_rate)
-        self.pos_embeddings = POSEmbeddings(len(pos_vocab), pos_embed_dim, drop_rate)
-        self.ent_embeddings = ENTEmbeddings(len(ent_vocab), ent_emb_size, drop_rate)
+      
+        
         self.char_embeddings = CharEmbeddings(len(char_vocab), char_embed_dim, drop_rate)
-        self.dep_embeddings = DEPEmbeddings(len(dep_vocab), dep_emb_size, drop_rate)
-        # self.pos_embeddings = nn.Embedding(max_positional_idx, positional_embed_dim, padding_idx=0)
+    
         if enc_type == 'LSTM':
             self.lstm = nn.LSTM(self.input_dim, self.hidden_dim, self.layers, batch_first=True,
                                 bidirectional=self.is_bidirectional, dropout=drop_out_rate)
@@ -916,14 +827,11 @@ class Encoder(nn.Module):
         # self.mhc = 3
         # self.mha = Multi_Head_Self_Attention(self.mhc, 2 * self.hidden_dim)
 
-    def forward(self, words, bert_mask, pos_tag_seq, ent_tag_seq, dep_tag_seq, chars, pos_seq, is_training=False):
+    def forward(self, words, bert_mask, chars, pos_seq, is_training=False):
         bert_embeds = self.bert_vec(words, bert_mask, is_training)
         word_input = bert_embeds
         #src_word_embeds = self.word_embeddings(words)#[bs, max_seq_len, emb_dim]
         #custom_print(word_input.shape)
-        pos_embeds = self.pos_embeddings(pos_tag_seq)
-        ent_embeds = self.ent_embeddings(ent_tag_seq)
-        dep_embeds = self.dep_embeddings(dep_tag_seq)
         #custom_print(pos_embeds.shape)
         # pos_embeds = self.dropout(self.pos_embeddings(pos_seq))
         char_embeds = self.char_embeddings(chars)#[]
@@ -933,7 +841,7 @@ class Encoder(nn.Module):
         char_feature = char_feature.permute(0, 2, 1)
         #custom_print(char_feature.shape)
 
-        words_input = torch.cat((word_input, pos_embeds, ent_embeds, dep_embeds), -1)#[bs, max_seq_len, emb_dim=350]
+        words_input = torch.cat((word_input), -1)#[bs, max_seq_len, emb_dim=350]
         #custom_print(words_input.shape)
 
         if enc_type == 'LSTM':
@@ -1291,9 +1199,6 @@ def predict(samples, model, model_id):
 
         src_words_seq = torch.from_numpy(cur_samples_input['src_words'].astype('long'))
         bert_words_mask = torch.from_numpy(cur_samples_input['bert_mask'].astype('bool'))
-        src_pos_tags = torch.from_numpy(cur_samples_input['pos_tag_seq'].astype('long'))
-        src_ent_tags = torch.from_numpy(cur_samples_input['ent_tag_seq'].astype('long'))##
-        src_dep_tags = torch.from_numpy(cur_samples_input['dep_tag_seq'].astype('long'))
         positional_seq = torch.from_numpy(cur_samples_input['positional_seq'].astype('long'))
         src_words_mask = torch.from_numpy(cur_samples_input['src_words_mask'].astype('uint8'))
         trg_words_seq = torch.from_numpy(cur_samples_input['decoder_input'].astype('long'))
@@ -1303,9 +1208,6 @@ def predict(samples, model, model_id):
         if torch.cuda.is_available():
             src_words_seq = src_words_seq.cuda()
             bert_words_mask = bert_words_mask.cuda()
-            src_pos_tags = src_pos_tags.cuda()
-            src_ent_tags = src_ent_tags.cuda()
-            src_dep_tags = src_dep_tags.cuda()
             src_words_mask = src_words_mask.cuda()
             trg_words_seq = trg_words_seq.cuda()
             src_chars_seq = src_chars_seq.cuda()
@@ -1314,9 +1216,6 @@ def predict(samples, model, model_id):
 
         src_words_seq = autograd.Variable(src_words_seq)
         bert_words_mask = autograd.Variable(bert_words_mask)
-        src_pos_tags = autograd.Variable(src_pos_tags)
-        src_ent_tags = autograd.Variable(src_ent_tags)
-        src_dep_tags = autograd.Variable(src_dep_tags)
         src_words_mask = autograd.Variable(src_words_mask)
         trg_words_seq = autograd.Variable(trg_words_seq)
         src_chars_seq = autograd.Variable(src_chars_seq)
@@ -1325,7 +1224,7 @@ def predict(samples, model, model_id):
 
         with torch.no_grad():
             if model_id == 1:
-                outputs = model(src_words_seq, bert_words_mask, src_pos_tags, src_ent_tags, src_dep_tags, src_words_mask, src_chars_seq, positional_seq, trg_words_seq,
+                outputs = model(src_words_seq, bert_words_mask, src_words_mask, src_chars_seq, positional_seq, trg_words_seq,
                                 max_trg_len, None, None, False)
 
         rel += list(outputs[0].data.cpu().numpy())
@@ -1430,9 +1329,6 @@ def train_model(model_id, train_samples, dev_samples, best_model_file):
 
             src_words_seq = torch.from_numpy(cur_samples_input['src_words'].astype('long'))#[23,45,1,56,78,..,0,0,..]
             bert_words_mask = torch.from_numpy(cur_samples_input['bert_mask'].astype('bool'))
-            src_pos_tags = torch.from_numpy(cur_samples_input['pos_tag_seq'].astype('long'))##
-            src_ent_tags = torch.from_numpy(cur_samples_input['ent_tag_seq'].astype('long'))##
-            src_dep_tags = torch.from_numpy(cur_samples_input['dep_tag_seq'].astype('long'))
             positional_seq = torch.from_numpy(cur_samples_input['positional_seq'].astype('long'))#[1,2,3,4,..,0,0,...]
             src_words_mask = torch.from_numpy(cur_samples_input['src_words_mask'].astype('bool'))#[0,0,0,0,0,1,1,1,..]
             trg_words_seq = torch.from_numpy(cur_samples_input['decoder_input'].astype('long'))#[2,5,1,6,id('none'),id(pad),id(pad),..]
@@ -1451,9 +1347,6 @@ def train_model(model_id, train_samples, dev_samples, best_model_file):
             if torch.cuda.is_available():
                 src_words_seq = src_words_seq.cuda()
                 bert_words_mask = bert_words_mask.cuda()
-                src_pos_tags = src_pos_tags.cuda()
-                src_ent_tags = src_ent_tags.cuda()
-                src_dep_tags = src_dep_tags.cuda()
                 src_words_mask = src_words_mask.cuda()
                 trg_words_seq = trg_words_seq.cuda()
                 src_chars_seq = src_chars_seq.cuda()
@@ -1474,9 +1367,6 @@ def train_model(model_id, train_samples, dev_samples, best_model_file):
 
             src_words_seq = autograd.Variable(src_words_seq)
             bert_words_mask = autograd.Variable(bert_words_mask)
-            src_pos_tags = autograd.Variable(src_pos_tags)
-            src_ent_tags = autograd.Variable(src_ent_tags)
-            src_dep_tags = autograd.Variable(src_dep_tags)
             src_words_mask = autograd.Variable(src_words_mask)
             trg_words_seq = autograd.Variable(trg_words_seq)
             src_chars_seq = autograd.Variable(src_chars_seq)
@@ -1504,7 +1394,7 @@ def train_model(model_id, train_samples, dev_samples, best_model_file):
 
             #if model_id == 1:
 
-            outputs = model(src_words_seq, bert_words_mask, src_pos_tags, src_ent_tags, src_dep_tags, src_words_mask, src_chars_seq, positional_seq, trg_words_seq, rel.size()[1], trigger_mask, entity_mask, True)# call seq2seqmodel()
+            outputs = model(src_words_seq, bert_words_mask, src_words_mask, src_chars_seq, positional_seq, trg_words_seq, rel.size()[1], trigger_mask, entity_mask, True)# call seq2seqmodel()
 
             rel = rel.view(-1, 1).squeeze()
             arg1s = trigger_s.view(-1, 1).squeeze()
@@ -1576,7 +1466,7 @@ batch_size = 32
 num_epoch = 100
 model_name=1
 
-logger = open('training-lstm.log', 'w+')
+logger = open('/home/alapan/joint_ee/training-lstm.log', 'w+')
 
 bert_base_size = 768
 update_bert = 0
@@ -1592,16 +1482,13 @@ word_min_freq = 2
 
 char_embed_dim = 50
 char_feature_size = 50
-ent_emb_size=50
-pos_embed_dim=50
-dep_emb_size = 50
 conv_filter_size = 3
 max_word_len = 10
 #positional_embed_dim = word_embed_dim
 #max_positional_idx = 100
 max_positional_idx = 140
 
-enc_inp_size = bert_base_size + pos_embed_dim + ent_emb_size + dep_emb_size
+enc_inp_size = bert_base_size #+ pos_embed_dim + ent_emb_size + dep_emb_size
 enc_hidden_size = enc_inp_size
 dec_inp_size = enc_hidden_size
 dec_hidden_size = dec_inp_size
@@ -1614,7 +1501,7 @@ update_freq = 1
 use_hadamard = False
 early_stop_cnt = 7
 
-Sample = recordclass("Sample", "Id SrcLen SrcWords PosTags EntTags DepTags TrgLen TrgRels eventTypes argTypes TrgPointers")
+Sample = recordclass("Sample", "Id SrcLen SrcWords TrgLen TrgRels eventTypes argTypes TrgPointers")
 rel_file = '/home/alapan/joint_ee/role.txt'
 relnameToIdx, relIdxToName = get_relations(rel_file)#return relation dictionary
 event_file = '/home/alapan/joint_ee/event_type.txt'
@@ -1627,27 +1514,20 @@ custom_print(batch_size, '\t', num_epoch)
 custom_print(enc_type)
 custom_print('loading data......')
 
-src_train_file = 'train_bert.sent'
-trg_train_file = 'train_bert.pointer'
-pos_train_file = 'train_bert.pos'
-ent_train_file = 'train_bert.ent'
-dep_train_file = 'train_bert.dep'
+src_train_file = '/home/alapan/joint_ee/train_bert.sent'
+trg_train_file = '/home/alapan/joint_ee/train_bert.pointer'
 
-train_data = read_data(src_train_file, trg_train_file, pos_train_file, ent_train_file, dep_train_file, 1)#call read_data() for train_set
+train_data = read_data(src_train_file, trg_train_file, 1)#call read_data() for train_set
 
-src_dev_file = 'dev_bert.sent'
-trg_dev_file = 'dev_bert.pointer'
-pos_dev_file = 'dev_bert.pos'
-ent_dev_file = 'dev_bert.ent'
-dep_dev_file = 'dev_bert.dep'
-dev_data = read_data(src_dev_file, trg_dev_file, pos_dev_file, ent_dev_file, dep_dev_file, 2)#call read_data() for dev_set
+src_dev_file = '/home/alapan/joint_ee/dev_bert.sent'
+trg_dev_file = '/home/alapan/joint_ee/dev_bert.pointer'
 
-src_test_file = 'test_bert.sent'
-trg_test_file = 'test_bert.pointer'
-pos_test_file = 'test_bert.pos'
-ent_test_file = 'test_bert.ent'
-dep_test_file = 'test_bert.dep'
-test_data = read_data(src_test_file, trg_test_file, pos_test_file, ent_test_file, dep_test_file, 3)#call read_data() for dev_set
+dev_data = read_data(src_dev_file, trg_dev_file, 2)#call read_data() for dev_set
+
+src_test_file = '/home/alapan/joint_ee/test_bert.sent'
+trg_test_file = '/home/alapan/joint_ee/test_bert.pointer'
+
+test_data = read_data(src_test_file, trg_test_file, 3)#call read_data() for dev_set
 
 custom_print('Training data size:', len(train_data))
 custom_print('Development data size:', len(dev_data))
@@ -1656,18 +1536,15 @@ custom_print("preparing vocabulary......")
 
 save_vocab = '/home/alapan/joint_ee/vocab.pkl'
 custom_print("getting pos tags......")
-#print("getting pos tags......")
-pos_vocab = build_tags(pos_train_file, pos_dev_file, pos_test_file)
-ent_vocab = build_tags(ent_train_file, ent_dev_file, ent_test_file)
-dep_vocab = build_tags(dep_train_file, dep_dev_file, dep_test_file)
 
-word_vocab, char_vocab, word_embed_matrix = build_vocab(train_data, dev_data, test_data, save_vocab, embedding_file)#create vocabulary and word embeddings
+
+word_vocab, char_vocab = build_vocab(train_data, dev_data, test_data, save_vocab)#create vocabulary and word embeddings
 
 #print("Training started......")
 custom_print("Training started......")
 
 model_name=1
-model_file_name = 'model_bert_19_10-lstm.h5py'
+model_file_name = '/home/alapan/joint_ee/model_bert_19_10-lstm.h5py'
 
 train_model(model_name, train_data, dev_data, model_file_name)#call train_model()
 logger.close()

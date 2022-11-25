@@ -152,7 +152,7 @@ def get_pred_triples(rel, arg1s, arg1e, arg2s, arg2e, eTypes, aTypes, src_words)
             continue
         touplet = (arg1, eventIdxToName[ev], arg2, argIdxToName[at], relIdxToName[r])
         if (touplet[0], touplet[1], touplet[2]) in [(t[0], t[1],t[2]) for t in touples]:#same (trigger, argument) pair can not have two different role
-        	continue
+            continue
         all_touples.append(touplet)
         if not is_full_match(touplet, touples):
             touples.append(touplet)
@@ -1615,9 +1615,9 @@ word_min_freq = 2
 
 char_embed_dim = 50
 char_feature_size = 50
-ent_emb_size=50
-pos_embed_dim=50
-dep_embed_dim=50
+# ent_emb_size=50
+# pos_embed_dim=50
+# dep_embed_dim=50
 
 conv_filter_size = 3
 max_word_len = 10
@@ -1626,7 +1626,7 @@ max_word_len = 10
 max_positional_idx = 140
 
 #enc_inp_size = bert_base_size + pos_embed_dim + char_feature_size + ent_emb_size + dep_embed_dim
-enc_inp_size = bert_base_size + pos_embed_dim + ent_emb_size + dep_embed_dim
+enc_inp_size = bert_base_size #+ pos_embed_dim + ent_emb_size + dep_embed_dim
 enc_hidden_size = enc_inp_size
 dec_inp_size = enc_hidden_size
 dec_hidden_size = dec_inp_size
@@ -1658,25 +1658,28 @@ custom_print('loading data......')
 
 src_train_file = '/home/alapan/joint_ee/5_10_21/train_bert.sent'
 trg_train_file = '/home/alapan/joint_ee/5_10_21/train_bert.pointer'
-pos_train_file = '/home/alapan/joint_ee/5_10_21/train_bert.pos'
-ent_train_file = '/home/alapan/joint_ee/5_10_21/train_bert.ent'
-dep_train_file = '/home/alapan/joint_ee/5_10_21/train_bert.dep'
+# pos_train_file = '/home/alapan/joint_ee/5_10_21/train_bert.pos'
+# ent_train_file = '/home/alapan/joint_ee/5_10_21/train_bert.ent'
+# dep_train_file = '/home/alapan/joint_ee/5_10_21/train_bert.dep'
 
-train_data = read_data(src_train_file, trg_train_file, pos_train_file, ent_train_file, dep_train_file, 1)#call read_data() for train_set
+# train_data = read_data(src_train_file, trg_train_file, pos_train_file, ent_train_file, dep_train_file, 1)#call read_data() for train_set
+train_data = read_data(src_train_file, trg_train_file, 1)#call read_data() for train_set
 
 src_dev_file = '/home/alapan/joint_ee/5_10_21/dev_bert.sent'
 trg_dev_file = '/home/alapan/joint_ee/5_10_21/dev_bert.pointer'
-pos_dev_file = '/home/alapan/joint_ee/5_10_21/dev_bert.pos'
-ent_dev_file = '/home/alapan/joint_ee/5_10_21/dev_bert.ent'
-dep_dev_file = '/home/alapan/joint_ee/5_10_21/dev_bert.dep'
-dev_data = read_data(src_dev_file, trg_dev_file, pos_dev_file, ent_dev_file, dep_dev_file, 2)#call read_data() for dev_set
+# pos_dev_file = '/home/alapan/joint_ee/5_10_21/dev_bert.pos'
+# ent_dev_file = '/home/alapan/joint_ee/5_10_21/dev_bert.ent'
+# dep_dev_file = '/home/alapan/joint_ee/5_10_21/dev_bert.dep'
+# dev_data = read_data(src_dev_file, trg_dev_file, pos_dev_file, ent_dev_file, dep_dev_file, 2)#call read_data() for dev_set
+dev_data = read_data(src_dev_file, trg_dev_file, 2)#call read_data() for dev_set
 
 src_test_file = '/home/alapan/joint_ee/5_10_21/test_bert.sent'
 trg_test_file = '/home/alapan/joint_ee/5_10_21/test_bert.pointer'
-pos_test_file = '/home/alapan/joint_ee/5_10_21/test_bert.pos'
-ent_test_file = '/home/alapan/joint_ee/5_10_21/test_bert.ent'
-dep_test_file = '/home/alapan/joint_ee/5_10_21/test_bert.dep'
-test_data = read_data(src_test_file, trg_test_file, pos_test_file, ent_test_file, dep_test_file, 3)#call read_data() for dev_set
+# pos_test_file = '/home/alapan/joint_ee/5_10_21/test_bert.pos'
+# ent_test_file = '/home/alapan/joint_ee/5_10_21/test_bert.ent'
+# dep_test_file = '/home/alapan/joint_ee/5_10_21/test_bert.dep'
+# test_data = read_data(src_test_file, trg_test_file, pos_test_file, ent_test_file, dep_test_file, 3)#call read_data() for dev_set
+test_data = read_data(src_test_file, trg_test_file, 3)#call read_data() for dev_set
 
 custom_print('Training data size:', len(train_data))
 custom_print('Development data size:', len(dev_data))

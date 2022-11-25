@@ -12,7 +12,7 @@ for path, dirs, files in os.walk(file_path):
         for file in files:
             if(file.endswith(".xml")):
                 root = ET.parse(os.path.join(file_path,file)).getroot()
-                for p in root.findall('.//P') :
+                for p in root.findall('P') :
                     event_dict = {}
                     arg_dict = {}
                     index = 2
